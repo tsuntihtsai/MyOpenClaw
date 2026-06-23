@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "gateway": {
+    "mode": "local",
+    "bind": "lan"
+  },
+  "channels": {
+    "line": {
+      "enabled": true,
+      "dmPolicy": "pairing"
+    }
+  }
+}
