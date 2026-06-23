@@ -6,4 +6,5 @@ COPY config.json /app/data/config.json
 
 EXPOSE 18789
 
-CMD ["/app/openclaw", "serve"]
+# 讓系統直接調用官方內建環境的 openclaw 指令即可
+CMD ["openclaw", "serve"]
