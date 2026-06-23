@@ -4,7 +4,7 @@ FROM ghcr.io/openclaw/openclaw:latest
 COPY config.json /data/config.json
 COPY config.json /app/data/config.json
 
-EXPOSE 18789
+EXPOSE 8080
 
 # 完美的容器組合拳：初始化完成後，強迫 Gateway 在前台常駐執行，不要走作業系統的 systemd 服務
 ENTRYPOINT ["/bin/sh", "-c", "openclaw onboard --non-interactive --accept-risk --skip-health && openclaw gateway run"]
