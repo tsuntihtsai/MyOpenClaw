@@ -6,5 +6,5 @@ COPY config.json /app/data/config.json
 
 EXPOSE 18789
 
-# 在 onboard 後面加上 --skip-health，叫它不要去戳 18789 埠，直接放行啟動！
-ENTRYPOINT ["/bin/sh", "-c", "openclaw onboard --non-interactive --accept-risk --skip-health && openclaw"]
+# 將後半段修改為 openclaw daemon，繞過需要 TTY 的 crestodian 預設畫面
+ENTRYPOINT ["/bin/sh", "-c", "openclaw onboard --non-interactive --accept-risk --skip-health && openclaw daemon"]
